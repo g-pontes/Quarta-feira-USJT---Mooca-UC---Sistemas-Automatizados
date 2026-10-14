@@ -1,0 +1,6 @@
+ID,Acao,Esperado,Obtido,Situacao,Evidencia
+T01,START por 2 s (solto antes de PT),Q=0 e MOTOR_DELAY=0,T1.ACC=0; T1.DN=0; MOTOR_DELAY=0 (START solto antes de 3 s),Aprovado,T01_START_solto.png (mostra o estado apos soltar START)
+T02,START por 3 s,Q=1 e MOTOR_DELAY=1,T1.ACC=3000; T1.DN=1; T1.TT=0; MOTOR_DELAY=1,Aprovado,T02_START_3s.png
+T03,STOP_OK=0 durante ET,ET zera e saida=0,T1.ACC=0; T1.DN=0; MOTOR_DELAY=0 (START=1 e STOP_OK=0),Aprovado,T03_STOP_OK_0.png
+T04,EMG_OK=0 com saida ligada,saida=0,T1.ACC=0; T1.DN=0; MOTOR_DELAY=0,Aprovado,T04_EMG_OK_0.png
+T05,Liberar falha sem START,saida permanece 0,MOTOR_DELAY=0; T1.ACC=0; T1.DN=0 (START=0; STOP_OK=1; EMG_OK=1),Aprovado,T05_liberar_falha.png
