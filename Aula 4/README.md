@@ -1,7 +1,5 @@
 # TP04 — Sistemas discretos e lógica combinacional
 
-Autor: Marcelo Antonio Pereira Marcolino. Revisão registrada em 16/09/2026.
-
 Implementação e validação da lógica combinacional da Semana 4, com CircuitVerse
 e PLC Simulator Online. A convenção é lógica positiva: `1` representa a condição
 declarada como presente; por isso `E=1` significa **emergência acionada**.
