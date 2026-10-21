@@ -1,12 +1,5 @@
 # TP08 — Sistemas supervisórios: protótipo navegável de HMI do reservatório R-101
 
-**Autor:** Marcelo Antonio Pereira Marcolino — USJT — ESO1AN-MCE3<br>
-**Estado:** protótipo construído no Figma a partir de arquivo vazio, estrutura conferida quadro a quadro com o
-desenho (65/65), 19/19 casos de navegação executados no modo Present **sem login** (link "qualquer pessoa com o
-link pode ver"), 32/32 casos de lógica e de CLP e 14/14 mutantes reprovados<br>
-**Data:** construção e verificação em 17 de outubro de 2026; execução sem login no Present às 02:54 UTC
-(16 de outubro, 23:54 em Brasília)
-
 ## Links e artefatos
 
 - **Protótipo no Figma** (Present começa em "N · Processo"): ver
