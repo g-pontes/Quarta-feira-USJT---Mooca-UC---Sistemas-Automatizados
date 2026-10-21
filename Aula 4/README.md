@@ -12,16 +12,11 @@ por amostra, incluindo os 32 estados do intertravamento, I01–I06, E01–E05 e
 T01–T05) e **72/72 na bateria de emergência** dos adicionais, todas vinculadas
 por SHA-256 aos artefatos e executores. A aba 04 explicita uma varredura:
 `MB_ANT` recebe o MB observado antes do scan; MA é calculado antes de MB.
-O CircuitVerse está em
-[`circuitverse/USJT-2026.2-SA-TP04-LogicaCombinacional-MarceloMarcolino.cv`](circuitverse/USJT-2026.2-SA-TP04-LogicaCombinacional-MarceloMarcolino.cv)
-e o Ladder nativo está em
-[`plc-simulator/diagrama-ladder.json`](plc-simulator/diagrama-ladder.json).
 
 ## Links públicos
 
 | Plataforma | Link | Conferência em contexto anônimo (16/09/2026) |
 |---|---|---|
-| CircuitVerse (projeto com os sete circuitos nomeados) | <https://circuitverse.org/users/458921/projects/2032603> | acesso público confirmado sem sessão; as sete abas e todos os rótulos de entradas/saídas coincidem com o `.cv` versionado, incluindo `MB_ANT` na aba 04 |
 | PLC Simulator Online (Ladder com tags legíveis) | <https://app.plcsimulator.online/HBFJRsCQV3LNX1uKhUm8> | carrega sem sessão; a estrutura normalizada completa do diagrama (ordem dos rungs, ramos, tipos de contato/bobina e variáveis por nome) é idêntica à do JSON versionado |
 
 A conferência foi automatizada em contexto de navegador sem cookies ou
