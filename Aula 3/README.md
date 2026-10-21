@@ -1,9 +1,4 @@
 # TP03 — Sinais analógicos e digitais
-
-**Autor:** Marcelo Antonio Pereira Marcolino — USJT — ESO1AN-MCE3<br>
-**Estado:** completo — 44/44 na validação local; A1–A4, Q1–Q9 e o LED confirmados no simulador<br>
-**Data da validação:** 7 de setembro de 2026 (rerodada em 8 de setembro); execução no Wokwi em 8 de setembro de 2026
-
 ## Links e artefatos
 
 - [Projeto público no Wokwi](https://wokwi.com/projects/474557584187065345)
