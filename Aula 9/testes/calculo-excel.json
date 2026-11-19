@@ -1,0 +1,72 @@
+{
+ "situacao_nos": {
+  "SCADA 172.16.10.20": "OK",
+  "SW-SUP 172.16.10.2": "OK",
+  "FW-SUP 172.16.10.1": "OK",
+  "FW-SUP 172.16.20.1": "OK",
+  "FW-SUP 172.16.30.1": "OK",
+  "FONTE-SUP ": "",
+  "SW-A 172.16.20.2": "OK",
+  "CLP-A 172.16.20.10": "OK",
+  "HMI-A 172.16.20.20": "OK",
+  "RIO-A1 172.16.20.31": "OK",
+  "RIO-A2 172.16.20.32": "OK",
+  "INV-A1 172.16.20.41": "OK",
+  "INV-A2 172.16.20.42": "OK",
+  "INV-A3 172.16.20.43": "OK",
+  "FONTE-A ": "",
+  "SW-B 172.16.30.2": "OK",
+  "GW-B 172.16.30.10": "OK",
+  "GW-B mestre RTU": "OK",
+  "CTRL-B Modbus 10": "OK",
+  "FONTE-B ": ""
+ },
+ "totais_matrizes": [
+  [
+   54.0,
+   75.0,
+   98.0,
+   63.0
+  ],
+  [
+   57.0,
+   77.0,
+   36.0
+  ],
+  [
+   39.0,
+   72.0,
+   58.0
+  ]
+ ],
+ "ciclo_com_margem": {
+  "normal": [
+   225.0,
+   "sim"
+  ],
+  "CTRL-B sem resposta (pula o resto)": [
+   325.0,
+   "sim"
+  ],
+  "MED-B sem resposta (pula o resto)": [
+   400.0,
+   "sim"
+  ],
+  "CTRL-B sem resposta, sem pular": [
+   575.0,
+   "não"
+  ]
+ },
+ "t03": {
+  "duplicado": {
+   "ip_do_no_novo": "172.16.20.41",
+   "linhas_duplicado": 2,
+   "linhas_ok": 16
+  },
+  "corrigido": {
+   "ip_do_no_novo": "172.16.20.50",
+   "linhas_duplicado": 0,
+   "linhas_ok": 18
+  }
+ }
+}

@@ -1,0 +1,815 @@
+{
+ "verificacao_utc": "2026-11-08T06:08:07Z",
+ "sha256": {
+  "rede.drawio": "4bbdc7b9ec45c50fe25db746600845bc95db881de8bdf13933482d76b3d64f57",
+  "TP09-rede.xlsx": "3843312b4bfa9c9f845fb8dffbc3e49af50e6a0aee8e3c08c61963a6d5d5e2cc",
+  "casos_teste.csv": "35f5524c1aa3ede164d5a397a8b5ad55bff9c061a79396d54b8680aa16411352"
+ },
+ "modo": "completo",
+ "aprovado": true,
+ "problemas": [],
+ "testes": {
+  "T01": {
+   "esperado": [
+    "F1",
+    "F2",
+    "F3",
+    "F4"
+   ],
+   "obtido": "F1, F2, F3, F4 operam (grafo lido do .drawio, alcance por VLAN); inventário do slide 54: 9/9 nós no diagrama",
+   "situacao": "aprovado"
+  },
+  "T02": {
+   "esperado": [
+    "F1",
+    "F2",
+    "F3"
+   ],
+   "obtido": "F1, F2, F3 operam; F4 cai (grafo lido do .drawio, alcance por VLAN)",
+   "situacao": "aprovado"
+  },
+  "T03": {
+   "esperado": [
+    "F1",
+    "F2",
+    "F3",
+    "F4"
+   ],
+   "obtido": "F1, F2, F3, F4 operam (grafo lido do .drawio, alcance por VLAN); com o nó novo em 172.16.20.41: 2 linhas DUPLICADO; corrigido para 172.16.20.50: todas OK",
+   "situacao": "aprovado"
+  },
+  "T04": {
+   "esperado": [
+    "F1",
+    "F2",
+    "F4"
+   ],
+   "obtido": "F1, F2, F4 operam; F3 cai (grafo lido do .drawio, alcance por VLAN)",
+   "situacao": "aprovado"
+  },
+  "T05": {
+   "esperado": [
+    "F1",
+    "F2",
+    "F3",
+    "F4"
+   ],
+   "obtido": "F1, F2, F3, F4 operam (grafo lido do .drawio, alcance por VLAN); NOVO-A1 em 172.16.20.50 (faixa de expansão, livre); porta 9 de 16 do SW-A; 0 endereços existentes alterados",
+   "situacao": "aprovado"
+  },
+  "T06": {
+   "esperado": [
+    "F1",
+    "F2",
+    "F3"
+   ],
+   "obtido": "F1, F2, F3 operam; F4 cai (grafo lido do .drawio, alcance por VLAN)",
+   "situacao": "aprovado"
+  },
+  "T07": {
+   "esperado": [
+    "F4"
+   ],
+   "obtido": "F4 opera; F1, F2, F3 caem (grafo lido do .drawio, alcance por VLAN)",
+   "situacao": "aprovado"
+  },
+  "T08": {
+   "esperado": [
+    "F1",
+    "F2"
+   ],
+   "obtido": "F1, F2 operam; F3, F4 caem (grafo lido do .drawio, alcance por VLAN)",
+   "situacao": "aprovado"
+  },
+  "T09": {
+   "esperado": [
+    "F1",
+    "F2"
+   ],
+   "obtido": "F1, F2 operam; F3, F4 caem (grafo lido do .drawio, alcance por VLAN)",
+   "situacao": "aprovado"
+  },
+  "T10": {
+   "esperado": [
+    "F1",
+    "F2",
+    "F3",
+    "F4"
+   ],
+   "obtido": "F1, F2, F3, F4 operam (grafo lido do .drawio, alcance por VLAN); endereços seriais Modbus 10, Modbus 11; ciclo com margem: normal 225 ms, CTRL-B sem resposta 325 ms, MED-B sem resposta 400 ms, CTRL-B sem resposta, sem pular 575 ms (requisito 500 ms)",
+   "situacao": "aprovado"
+  },
+  "T11": {
+   "esperado": [
+    "F1",
+    "F2",
+    "F3",
+    "F4"
+   ],
+   "obtido": "F1, F2, F3, F4 operam (grafo lido do .drawio, alcance por VLAN); troncos do anel: FO-A VLANs 20, 30; FO-B VLANs 20, 30; FO-AB VLANs 20, 30",
+   "situacao": "aprovado"
+  }
+ },
+ "riscos": [
+  {
+   "elemento": "SCADA",
+   "tipo": "servidor",
+   "funcoes_perdidas": [
+    "F3",
+    "F4"
+   ],
+   "pares_perdidos": 2,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "SW-SUP",
+   "tipo": "switch",
+   "funcoes_perdidas": [
+    "F3",
+    "F4"
+   ],
+   "pares_perdidos": 2,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "FW-SUP",
+   "tipo": "firewall",
+   "funcoes_perdidas": [
+    "F3",
+    "F4"
+   ],
+   "pares_perdidos": 2,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "FONTE-SUP",
+   "tipo": "fonte",
+   "funcoes_perdidas": [
+    "F3",
+    "F4"
+   ],
+   "pares_perdidos": 2,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "SW-A",
+   "tipo": "switch",
+   "funcoes_perdidas": [
+    "F1",
+    "F2",
+    "F3"
+   ],
+   "pares_perdidos": 7,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "CLP-A",
+   "tipo": "controlador",
+   "funcoes_perdidas": [
+    "F1",
+    "F2",
+    "F3"
+   ],
+   "pares_perdidos": 7,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "HMI-A",
+   "tipo": "interface",
+   "funcoes_perdidas": [
+    "F2"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "RIO-A1",
+   "tipo": "E/S remota",
+   "funcoes_perdidas": [
+    "F1"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "RIO-A2",
+   "tipo": "E/S remota",
+   "funcoes_perdidas": [
+    "F1"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "INV-A1",
+   "tipo": "acionamento",
+   "funcoes_perdidas": [
+    "F1"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "INV-A2",
+   "tipo": "acionamento",
+   "funcoes_perdidas": [
+    "F1"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "INV-A3",
+   "tipo": "acionamento",
+   "funcoes_perdidas": [
+    "F1"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "FONTE-A",
+   "tipo": "fonte",
+   "funcoes_perdidas": [
+    "F1",
+    "F2",
+    "F3"
+   ],
+   "pares_perdidos": 7,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "SW-B",
+   "tipo": "switch",
+   "funcoes_perdidas": [
+    "F4"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "GW-B",
+   "tipo": "gateway",
+   "funcoes_perdidas": [
+    "F4"
+   ],
+   "pares_perdidos": 2,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "CTRL-B",
+   "tipo": "controlador",
+   "funcoes_perdidas": [
+    "F4"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "FONTE-B",
+   "tipo": "fonte",
+   "funcoes_perdidas": [
+    "F4"
+   ],
+   "pares_perdidos": 2,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "L-SCADA",
+   "tipo": "cobre",
+   "funcoes_perdidas": [
+    "F3",
+    "F4"
+   ],
+   "pares_perdidos": 2,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "L-FW",
+   "tipo": "cobre",
+   "funcoes_perdidas": [
+    "F3",
+    "F4"
+   ],
+   "pares_perdidos": 2,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "FO-A",
+   "tipo": "fibra",
+   "funcoes_perdidas": [
+    "F3"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "FO-B",
+   "tipo": "fibra",
+   "funcoes_perdidas": [
+    "F4"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "L-CLP",
+   "tipo": "cobre",
+   "funcoes_perdidas": [
+    "F1",
+    "F2",
+    "F3"
+   ],
+   "pares_perdidos": 7,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "L-HMI",
+   "tipo": "cobre",
+   "funcoes_perdidas": [
+    "F2"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "L-RIO1",
+   "tipo": "cobre",
+   "funcoes_perdidas": [
+    "F1"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "L-RIO2",
+   "tipo": "cobre",
+   "funcoes_perdidas": [
+    "F1"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "L-INV1",
+   "tipo": "cobre",
+   "funcoes_perdidas": [
+    "F1"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "L-INV2",
+   "tipo": "cobre",
+   "funcoes_perdidas": [
+    "F1"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "L-INV3",
+   "tipo": "cobre",
+   "funcoes_perdidas": [
+    "F1"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "L-GW",
+   "tipo": "cobre",
+   "funcoes_perdidas": [
+    "F4"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "local (um dispositivo)",
+   "exige": true,
+   "declarado": true
+  },
+  {
+   "elemento": "RS-B",
+   "tipo": "RS-485",
+   "funcoes_perdidas": [
+    "F4"
+   ],
+   "pares_perdidos": 1,
+   "alcance": "PUF (compartilhado)",
+   "exige": true,
+   "declarado": true
+  }
+ ],
+ "matrizes": [
+  {
+   "trecho": "Célula A — rede de campo (CLP-A, remotas e inversores)",
+   "totais": [
+    54,
+    75,
+    98,
+    63
+   ],
+   "situacao": [
+    "ELIMINADA",
+    "ELIMINADA",
+    "ESCOLHIDA",
+    "ELIMINADA"
+   ]
+  },
+  {
+   "trecho": "Entre áreas — backbone (sala ↔ células, 120 m, EMI)",
+   "totais": [
+    57,
+    77,
+    36
+   ],
+   "situacao": [
+    "ELIMINADA",
+    "ESCOLHIDA",
+    "possível"
+   ]
+  },
+  {
+   "trecho": "Célula B — integração do legado (CTRL-B, só Modbus RTU)",
+   "totais": [
+    39,
+    72,
+    58
+   ],
+   "situacao": [
+    "possível",
+    "ESCOLHIDA",
+    "ELIMINADA"
+   ]
+  }
+ ],
+ "auto_auditoria": [
+  {
+   "defeito": "IP duplicado (INV-A2 com o IP do INV-A1)",
+   "regra": "duplicado",
+   "pela_regra_certa": true,
+   "motivos": [
+    "arquitetura: IP 172.16.20.41 duplicado (INV-A1 e INV-A2)",
+    "extensões: IP 172.16.20.41 duplicado (INV-A1 e INV-A2)",
+    "T03 reprovado: F1, F2, F3, F4 operam (grafo lido do .drawio, alcance por VLAN); com o nó novo em 172.16.20.41: 3 linhas DUPLICADO; corrigido para 172.16.20.50: ainda DUPLICADO"
+   ]
+  },
+  {
+   "defeito": "interface incompatível (INV-A1 em Modbus TCP)",
+   "regra": "não suporta",
+   "pela_regra_certa": true,
+   "motivos": [
+    "arquitetura: enlace L-INV1: INV-A1 não suporta ['Modbus TCP'] em interface Ethernet"
+   ]
+  },
+  {
+   "defeito": "enlace sem meio e protocolo no rótulo (FO-B)",
+   "regra": "sem meio e protocolo",
+   "pela_regra_certa": true,
+   "motivos": [
+    "arquitetura: enlace FO-B sem meio e protocolo no rótulo",
+    "arquitetura: tronco FO-B sem as VLANs [30] no rótulo"
+   ]
+  },
+  {
+   "defeito": "nó faltando no diagrama (RIO-A2)",
+   "regra": "diagrama e aba Nós diferem",
+   "pela_regra_certa": true,
+   "motivos": [
+    "arquitetura: enlace L-RIO2 com ponta fora do diagrama (SW-A–RIO-A2)",
+    "arquitetura: diagrama e aba Nós diferem: [('RIO-A2', '172.16.20.32')]",
+    "riscos: linha 19 cita RIO-A2, que não está no diagrama"
+   ]
+  },
+  {
+   "defeito": "IP fora da sub-rede (HMI-A em 172.16.30.20)",
+   "regra": "fora da sub-rede",
+   "pela_regra_certa": true,
+   "motivos": [
+    "arquitetura: HMI-A com 172.16.30.20 fora da sub-rede da zona A",
+    "extensões: HMI-A com 172.16.30.20 fora da sub-rede da zona A"
+   ]
+  },
+  {
+   "defeito": "endereço Modbus repetido (MED-B com 10)",
+   "regra": "Modbus 10 repetido",
+   "pela_regra_certa": true,
+   "motivos": [
+    "extensões: endereço Modbus 10 repetido no barramento (CTRL-B e MED-B)",
+    "T10 reprovado: F1, F2, F3, F4 operam (grafo lido do .drawio, alcance por VLAN); endereços seriais Modbus 10, Modbus 10; ciclo com margem: normal 225 ms, CTRL-B sem resposta 325 ms, MED-B sem resposta 400 ms, CTRL-B sem resposta, sem pular 575 ms (requisito 500 ms)",
+    "aba Testes: obtido de T10 difere do verificado"
+   ]
+  },
+  {
+   "defeito": "serial ligado direto ao switch (RS-B no SW-B)",
+   "regra": "SW-B não suporta",
+   "pela_regra_certa": true,
+   "motivos": [
+    "arquitetura: enlace RS-B: SW-B não suporta ['Modbus RTU'] em interface serial",
+    "arquitetura: diagrama e aba Enlaces diferem: [('RS-B', 'GW-B', 'CTRL-B', 'RS-485', 'Modbus RTU', '—', '8'), ('RS-B', 'SW-B', 'CTRL-B', 'RS-485', 'Modbus RTU', '—', '8')]",
+    "riscos: L-GW com alcance 'local (um dispositivo)', esperado 'PUF (compartilhado)'"
+   ]
+  },
+  {
+   "defeito": "nó desenhado fora da zona (CTRL-B na célula A)",
+   "regra": "CTRL-B desenhado fora da zona",
+   "pela_regra_certa": true,
+   "motivos": [
+    "arquitetura: CTRL-B desenhado fora da zona B",
+    "extensões: CTRL-B desenhado fora da zona B"
+   ]
+  },
+  {
+   "defeito": "anel sem a VLAN 20 no tronco FO-B (ensaio da revisão independente)",
+   "regra": "T11 reprovado",
+   "pela_regra_certa": true,
+   "motivos": [
+    "T11 reprovado: F1, F2, F4 operam; F3 cai (grafo lido do .drawio, alcance por VLAN); troncos do anel: FO-A VLANs 20, 30; FO-B VLANs 30; FO-AB VLANs 20, 30",
+    "aba Testes: obtido de T11 difere do verificado",
+    "aba Testes: situação de T11 é 'aprovado', verificado 'reprovado'"
+   ]
+  },
+  {
+   "defeito": "porta de acesso da HMI-A na VLAN 30",
+   "regra": "porta de acesso L-HMI",
+   "pela_regra_certa": true,
+   "motivos": [
+    "arquitetura: porta de acesso L-HMI de HMI-A com VLANs [30], esperada 20",
+    "riscos: SCADA declara ['F3', 'F4'], mas derruba ['F2', 'F3', 'F4']",
+    "riscos: SW-SUP declara ['F3', 'F4'], mas derruba ['F2', 'F3', 'F4']"
+   ]
+  },
+  {
+   "defeito": "ponto único de falha não declarado (SW-B)",
+   "regra": "SW-B derruba",
+   "pela_regra_certa": true,
+   "motivos": [
+    "riscos: SW-B derruba ['F4'] e não está declarado"
+   ]
+  },
+  {
+   "defeito": "registro do CLP-A retirado (ensaio da revisão independente)",
+   "regra": "CLP-A derruba",
+   "pela_regra_certa": true,
+   "motivos": [
+    "riscos: CLP-A derruba ['F1', 'F2', 'F3'] e não está declarado",
+    "riscos: L-CLP derruba ['F1', 'F2', 'F3'] e não está declarado"
+   ]
+  },
+  {
+   "defeito": "registro do SCADA retirado (ensaio da revisão independente)",
+   "regra": "SCADA derruba",
+   "pela_regra_certa": true,
+   "motivos": [
+    "riscos: SCADA derruba ['F3', 'F4'] e não está declarado"
+   ]
+  },
+  {
+   "defeito": "registro das remotas retirado",
+   "regra": "RIO-A1 derruba",
+   "pela_regra_certa": true,
+   "motivos": [
+    "riscos: RIO-A1 derruba ['F1'] e não está declarado",
+    "riscos: RIO-A2 derruba ['F1'] e não está declarado",
+    "riscos: L-RIO1 derruba ['F1'] e não está declarado"
+   ]
+  },
+  {
+   "defeito": "impacto declarado errado (FO-B derrubaria F3)",
+   "regra": "FO-B declara",
+   "pela_regra_certa": true,
+   "motivos": [
+    "riscos: FO-B declara ['F3'], mas derruba ['F4']"
+   ]
+  },
+  {
+   "defeito": "impacto errado do CLP-A (ensaio da revisão independente)",
+   "regra": "CLP-A declara",
+   "pela_regra_certa": true,
+   "motivos": [
+    "riscos: CLP-A declara ['F1'], mas derruba ['F1', 'F2', 'F3']",
+    "riscos: L-CLP declara ['F1'], mas derruba ['F1', 'F2', 'F3']"
+   ]
+  },
+  {
+   "defeito": "mitigação vazia do CLP-A (ensaio da revisão independente)",
+   "regra": "sem falha, mitigação ou teste",
+   "pela_regra_certa": true,
+   "motivos": [
+    "riscos: linha 12 (CLP-A, L-CLP) sem falha, mitigação ou teste"
+   ]
+  },
+  {
+   "defeito": "alcance errado (CTRL-B como PUF)",
+   "regra": "CTRL-B com alcance",
+   "pela_regra_certa": true,
+   "motivos": [
+    "riscos: CTRL-B com alcance 'PUF (compartilhado)', esperado 'local (um dispositivo)'"
+   ]
+  },
+  {
+   "defeito": "risco de elemento inexistente (SW-X)",
+   "regra": "SW-X, que não está no diagrama",
+   "pela_regra_certa": true,
+   "motivos": [
+    "riscos: linha 24 cita SW-X, que não está no diagrama"
+   ]
+  },
+  {
+   "defeito": "T11 apagado da aba Testes no .xlsx (ensaio da revisão independente)",
+   "regra": "faltam ['T11']",
+   "pela_regra_certa": true,
+   "motivos": [
+    "aba Testes: testes diferentes de T01–T11 (faltam ['T11'], desconhecidos [], repetidos [])"
+   ]
+  },
+  {
+   "defeito": "todas as linhas da aba Testes apagadas (ensaio da revisão independente)",
+   "regra": "aba Testes: testes diferentes",
+   "pela_regra_certa": true,
+   "motivos": [
+    "aba Testes: testes diferentes de T01–T11 (faltam ['T01', 'T02', 'T03', 'T04', 'T05', 'T06', 'T07', 'T08', 'T09', 'T10', 'T11'], desconhecidos [], repetidos [])"
+   ]
+  },
+  {
+   "defeito": "T01 repetido na aba Testes",
+   "regra": "repetidos ['T01']",
+   "pela_regra_certa": true,
+   "motivos": [
+    "aba Testes: testes diferentes de T01–T11 (faltam [], desconhecidos [], repetidos ['T01'])"
+   ]
+  },
+  {
+   "defeito": "teste desconhecido T12 no CSV",
+   "regra": "desconhecidos ['T12']",
+   "pela_regra_certa": true,
+   "motivos": [
+    "casos_teste.csv: testes diferentes de T01–T11 (faltam [], desconhecidos ['T12'], repetidos [])"
+   ]
+  },
+  {
+   "defeito": "esperado do T02 alterado",
+   "regra": "esperado de T02",
+   "pela_regra_certa": true,
+   "motivos": [
+    "aba Testes: esperado de T02 não é o da especificação ('F1, F2, F3, F4 operam')"
+   ]
+  },
+  {
+   "defeito": "obtido do T04 alterado",
+   "regra": "obtido de T04",
+   "pela_regra_certa": true,
+   "motivos": [
+    "aba Testes: obtido de T04 difere do verificado"
+   ]
+  },
+  {
+   "defeito": "situação do T07 alterada no CSV",
+   "regra": "situação de T07",
+   "pela_regra_certa": true,
+   "motivos": [
+    "casos_teste.csv: situação de T07 é 'pendente', verificado 'aprovado'"
+   ]
+  },
+  {
+   "defeito": "esperado do T03 adulterado no XLSX (ensaio da revisão independente)",
+   "regra": "aba Testes: esperado de T03",
+   "pela_regra_certa": true,
+   "motivos": [
+    "aba Testes: esperado de T03 não é o da especificação ('F1, F2, F3, F4 operam; com o nó novo em 172.16.20.41, a plan')"
+   ]
+  },
+  {
+   "defeito": "esperado do T03 adulterado no CSV (ensaio da revisão independente)",
+   "regra": "casos_teste.csv: esperado de T03",
+   "pela_regra_certa": true,
+   "motivos": [
+    "casos_teste.csv: esperado de T03 não é o da especificação ('F1, F2, F3, F4 operam; com o nó novo em 172.16.20.41, a plan')"
+   ]
+  },
+  {
+   "defeito": "esperado do T03 adulterado no XLSX e no CSV (ensaio da revisão independente)",
+   "regra": "esperado de T03 não é o da especificação",
+   "pela_regra_certa": true,
+   "motivos": [
+    "aba Testes: esperado de T03 não é o da especificação ('F1, F2, F3, F4 operam; com o nó novo em 172.16.20.41, a plan')",
+    "casos_teste.csv: esperado de T03 não é o da especificação ('F1, F2, F3, F4 operam; com o nó novo em 172.16.20.41, a plan')"
+   ]
+  },
+  {
+   "defeito": "esperado do T10 adulterado no XLSX (ensaio da revisão independente)",
+   "regra": "aba Testes: esperado de T10",
+   "pela_regra_certa": true,
+   "motivos": [
+    "aba Testes: esperado de T10 não é o da especificação ('F1, F2, F3, F4 operam; endereços seriais repetidos; ciclo de')"
+   ]
+  },
+  {
+   "defeito": "esperado do T10 adulterado no CSV (ensaio da revisão independente)",
+   "regra": "casos_teste.csv: esperado de T10",
+   "pela_regra_certa": true,
+   "motivos": [
+    "casos_teste.csv: esperado de T10 não é o da especificação ('F1, F2, F3, F4 operam; endereços seriais repetidos; ciclo de')"
+   ]
+  },
+  {
+   "defeito": "esperado do T10 adulterado no XLSX e no CSV (ensaio da revisão independente)",
+   "regra": "esperado de T10 não é o da especificação",
+   "pela_regra_certa": true,
+   "motivos": [
+    "aba Testes: esperado de T10 não é o da especificação ('F1, F2, F3, F4 operam; endereços seriais repetidos; ciclo de')",
+    "casos_teste.csv: esperado de T10 não é o da especificação ('F1, F2, F3, F4 operam; endereços seriais repetidos; ciclo de')"
+   ]
+  },
+  {
+   "defeito": "esperado do T02 adulterado no XLSX (ensaio da revisão independente)",
+   "regra": "aba Testes: esperado de T02",
+   "pela_regra_certa": true,
+   "motivos": [
+    "aba Testes: esperado de T02 não é o da especificação ('F1, F2, F3 operam; F4 continua operando normalmente')"
+   ]
+  },
+  {
+   "defeito": "esperado do T02 adulterado no CSV (ensaio da revisão independente)",
+   "regra": "casos_teste.csv: esperado de T02",
+   "pela_regra_certa": true,
+   "motivos": [
+    "casos_teste.csv: esperado de T02 não é o da especificação ('F1, F2, F3 operam; F4 continua operando normalmente')"
+   ]
+  },
+  {
+   "defeito": "esperado do T02 adulterado no XLSX e no CSV (ensaio da revisão independente)",
+   "regra": "esperado de T02 não é o da especificação",
+   "pela_regra_certa": true,
+   "motivos": [
+    "aba Testes: esperado de T02 não é o da especificação ('F1, F2, F3 operam; F4 continua operando normalmente')",
+    "casos_teste.csv: esperado de T02 não é o da especificação ('F1, F2, F3 operam; F4 continua operando normalmente')"
+   ]
+  },
+  {
+   "defeito": "Modbus TCP mantido como possível na célula A",
+   "regra": "Modbus TCP não é suportado",
+   "pela_regra_certa": true,
+   "motivos": [
+    "matriz Célula A — rede de campo (CLP-A, remotas e inversores): Modbus TCP não é suportado pelas interfaces de campo (['PROFINET']) e não está eliminada"
+   ]
+  }
+ ],
+ "limite": "inspeção documental sobre o .drawio, o .xlsx e o .csv; não mede tráfego, latência nem recuperação"
+}
